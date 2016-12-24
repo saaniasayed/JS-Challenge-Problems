@@ -1,0 +1,39 @@
+var moonWalkers = [
+  "Neil Armstrong",
+  "Buzz Aldrin",
+  "Pete Conrad",
+  "Alan Bean",
+  "Alan Shepard",
+  "Edgar Mitchell",
+  "David Scott",
+  "James Irwin",
+  "John Young",
+  "Charles Duke",
+  "Eugene Cernan",
+  "Harrison Schmitt"
+];
+
+function alphabetizer(names) {
+    // Your code goes here!
+    var reversedName;
+    var arrReversedName = [];
+    for (var i = 0; i < names.length; i++) {
+        var arr = names[i].split(" ");
+        var firstName = arr[0];
+        var secondName = arr[1];
+        
+        reversedName = secondName +" "+ firstName;
+        arrReversedName.push(reversedName);
+    }
+    return arrReversedName.sort();
+}
+
+// Try logging your results to test your code!
+console.log(alphabetizer(moonWalkers));
+
+Output:
+
+24 12 2016 11:27:23.693:
+with unlimited concurrency
+24 12 2016 11:27:23.942:
+LOG: ['Aldrin Buzz', 'Armstrong Neil', 'Bean Alan', 'Cernan Eugene', 'Conrad Pete', 'Duke Charles', 'Irwin James', 'Mitchell Edgar', 'Schmitt Harrison', 'Scott David', 'Shepard Alan', 'Young John']
